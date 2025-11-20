@@ -1,0 +1,28 @@
+import React from "react";
+import Main from "../components/Main";
+import RunningBrand from "../components/RunningBrand";
+import Recommend from "../components/Recommend";
+import { ProductStore } from "../store/store";
+import ProductList from "../components/ProductList";
+
+const AccessoriesPage = () => {
+  const {accessories} = ProductStore();
+  return (
+    <div className="w-screen bg-[#ffffff]">
+      <div>
+        <Main />
+      </div>
+      <div>
+        <RunningBrand />
+      </div>
+      <div>
+        <Recommend data={accessories} />
+      </div>
+      <div>
+        <ProductList data={accessories} />
+      </div>
+    </div>
+  );
+};
+
+export default AccessoriesPage;
